@@ -1,0 +1,138 @@
+body,html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    background: -webkit-radial-gradient(
+                #407BA0,
+                #214154,
+                #13242F
+                );
+}
+
+h1 {
+    color: #eee;
+}
+
+.nubes,.mapa {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+}
+
+.nubes {
+    width: 220px;
+    height: 220px; 
+}
+
+.nubes img {
+    position: relative;
+    z-index: 20;
+}
+
+.mapa {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: -30px -20px 0 0 rgba(0,0,0,0.1) inset,
+                -70px -30px 0 0 rgba(0,0,0,0.1) inset,
+                5px 5px 0 0 rgba(255,255,255,0.2) inset;
+    background: url(../img/mapa.png);
+    background-size: cover;
+    
+    -webkit-animation: tierra-girando 5s infinite linear;
+}
+
+@-webkit-keyframes tierra-girando {
+    from {
+        background-position: left center;
+    }
+    to {
+        background-position: -396px center;
+    }
+}
+
+.estrella {
+    width: 2px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    border-radius: 50%;  
+}
+
+.primera {
+    top: 20%;
+    left: 50%;
+}
+
+.segunda {
+    top: 30%;
+    left: 30%;
+}
+.tercera {
+    top: 50%;
+    left: 80%;
+}
+.cuarta {
+    top: 80%;
+    left: 20%;
+}
+.quinta {
+    top: 30%;
+    left: 80%;
+}
+.sexta {
+    top: 70%;
+    left: 80%;
+}
+.septima {
+    top: 50%;
+    left: 40%;
+}
+.octava {
+    top: 80%;
+    left: 50%;
+}
+.novena {
+    top: 35%;
+    left: 10%;
+}
+.decima {
+    top: 60%;
+    left: 20%;
+}
+
+.estrella:nth-child(2n) {
+    -webkit-animation: estrella-par 2s infinite;
+}
+
+@-webkit-keyframes estrella-par {
+    0%,90%{
+        box-shadow: 0 0 3px 3px rgba(255,255,255,0.3);
+    }
+    100%{
+        box-shadow: 0 0 16px 16px rgba(255,255,255,0.3);
+    }
+}
+
+.estrella:nth-child(2n+1) {
+    -webkit-animation: estrella-impar 2s infinite;
+}
+
+@-webkit-keyframes estrella-impar {
+    0%,35%,90%{
+        box-shadow: 0 0 3px 3px rgba(255,255,255,0.3);
+    }
+    45%{
+        box-shadow: 0 0 16px 16px rgba(255,255,255,0.3);
+    }
+}
+    
+    
